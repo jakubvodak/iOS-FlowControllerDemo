@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		CBB063321E3749A40004EE35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB063311E3749A40004EE35 /* AppDelegate.swift */; };
-		CBB063341E3749A40004EE35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB063331E3749A40004EE35 /* ViewController.swift */; };
 		CBB063371E3749A40004EE35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB063351E3749A40004EE35 /* Main.storyboard */; };
 		CBB063391E3749A40004EE35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB063381E3749A40004EE35 /* Assets.xcassets */; };
 		CBB0633C1E3749A40004EE35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB0633A1E3749A40004EE35 /* LaunchScreen.storyboard */; };
+		CBB063491E377D7C0004EE35 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB063481E377D7C0004EE35 /* HomeViewController.swift */; };
+		CBB0634B1E3780C10004EE35 /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0634A1E3780C10004EE35 /* FlowViewController.swift */; };
+		CBB0634D1E3780CF0004EE35 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0634C1E3780CF0004EE35 /* Event.swift */; };
+		CBB063511E3786090004EE35 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB063501E3786090004EE35 /* TextViewController.swift */; };
+		CBB063531E3786140004EE35 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB063521E3786140004EE35 /* DateViewController.swift */; };
+		CBB063551E3786340004EE35 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB063541E3786340004EE35 /* SummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CBB0632E1E3749A40004EE35 /* FlowControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB063311E3749A40004EE35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBB063331E3749A40004EE35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBB063361E3749A40004EE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBB063381E3749A40004EE35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB0633B1E3749A40004EE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBB0633D1E3749A40004EE35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBB063481E377D7C0004EE35 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CBB0634A1E3780C10004EE35 /* FlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowViewController.swift; sourceTree = "<group>"; };
+		CBB0634C1E3780CF0004EE35 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		CBB063501E3786090004EE35 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		CBB063521E3786140004EE35 /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		CBB063541E3786340004EE35 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,43 @@
 		CBB063301E3749A40004EE35 /* FlowControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CBB063471E377D440004EE35 /* Controller */,
+				CBB063461E377D3F0004EE35 /* View */,
+				CBB063451E377D3A0004EE35 /* Model */,
 				CBB063311E3749A40004EE35 /* AppDelegate.swift */,
-				CBB063331E3749A40004EE35 /* ViewController.swift */,
 				CBB063351E3749A40004EE35 /* Main.storyboard */,
 				CBB063381E3749A40004EE35 /* Assets.xcassets */,
 				CBB0633A1E3749A40004EE35 /* LaunchScreen.storyboard */,
 				CBB0633D1E3749A40004EE35 /* Info.plist */,
 			);
 			path = FlowControllerDemo;
+			sourceTree = "<group>";
+		};
+		CBB063451E377D3A0004EE35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CBB0634C1E3780CF0004EE35 /* Event.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CBB063461E377D3F0004EE35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CBB063471E377D440004EE35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CBB063481E377D7C0004EE35 /* HomeViewController.swift */,
+				CBB0634A1E3780C10004EE35 /* FlowViewController.swift */,
+				CBB063501E3786090004EE35 /* TextViewController.swift */,
+				CBB063521E3786140004EE35 /* DateViewController.swift */,
+				CBB063541E3786340004EE35 /* SummaryViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB063341E3749A40004EE35 /* ViewController.swift in Sources */,
+				CBB063511E3786090004EE35 /* TextViewController.swift in Sources */,
+				CBB0634D1E3780CF0004EE35 /* Event.swift in Sources */,
 				CBB063321E3749A40004EE35 /* AppDelegate.swift in Sources */,
+				CBB063491E377D7C0004EE35 /* HomeViewController.swift in Sources */,
+				CBB063531E3786140004EE35 /* DateViewController.swift in Sources */,
+				CBB063551E3786340004EE35 /* SummaryViewController.swift in Sources */,
+				CBB0634B1E3780C10004EE35 /* FlowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
