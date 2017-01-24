@@ -8,8 +8,32 @@
 
 import UIKit
 
+protocol DateViewControllerDelegate: class {
+    
+    func controllerDidFinishWithDate(date: Date, controller: DateViewController)
+    
+    func controllerDidCancel(controller: DateViewController)
+}
+
 class DateViewController: UIViewController {
 
+    // MARK: - Delegate
+    
+    weak var delegate: DateViewControllerDelegate?
+    
+    fileprivate func didFinishWithText(date: Date) {
+        
+        delegate?.controllerDidFinishWithDate(date: date, controller: self)
+    }
+    
+    fileprivate func didCancel() {
+        
+        delegate?.controllerDidCancel(controller: self)
+    }
+    
+    
+    // MARK: - Object Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

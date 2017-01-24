@@ -9,11 +9,15 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     // MARK: - Action
 
+    var newEventFlow: FlowViewController!
+    
     @IBAction func newEventAction(_ sender: AnyObject) {
         
+        newEventFlow = FlowViewController(navigationController!)
         
+        newEventFlow.start()
     }
 }

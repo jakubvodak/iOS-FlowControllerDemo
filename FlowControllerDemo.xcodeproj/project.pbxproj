@@ -17,6 +17,8 @@
 		CBB063511E3786090004EE35 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB063501E3786090004EE35 /* TextViewController.swift */; };
 		CBB063531E3786140004EE35 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB063521E3786140004EE35 /* DateViewController.swift */; };
 		CBB063551E3786340004EE35 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB063541E3786340004EE35 /* SummaryViewController.swift */; };
+		CBB063581E37887A0004EE35 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB063571E37887A0004EE35 /* UIImage.swift */; };
+		CBB0635A1E3788990004EE35 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB063591E3788990004EE35 /* UIFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		CBB063501E3786090004EE35 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		CBB063521E3786140004EE35 /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		CBB063541E3786340004EE35 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		CBB063571E37887A0004EE35 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		CBB063591E3788990004EE35 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		CBB063301E3749A40004EE35 /* FlowControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CBB063561E3788530004EE35 /* Util */,
 				CBB063471E377D440004EE35 /* Controller */,
 				CBB063461E377D3F0004EE35 /* View */,
 				CBB063451E377D3A0004EE35 /* Model */,
@@ -101,6 +106,15 @@
 				CBB063541E3786340004EE35 /* SummaryViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		CBB063561E3788530004EE35 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CBB063571E37887A0004EE35 /* UIImage.swift */,
+				CBB063591E3788990004EE35 /* UIFont.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,12 +191,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBB063511E3786090004EE35 /* TextViewController.swift in Sources */,
+				CBB063581E37887A0004EE35 /* UIImage.swift in Sources */,
 				CBB0634D1E3780CF0004EE35 /* Event.swift in Sources */,
 				CBB063321E3749A40004EE35 /* AppDelegate.swift in Sources */,
 				CBB063491E377D7C0004EE35 /* HomeViewController.swift in Sources */,
 				CBB063531E3786140004EE35 /* DateViewController.swift in Sources */,
 				CBB063551E3786340004EE35 /* SummaryViewController.swift in Sources */,
 				CBB0634B1E3780C10004EE35 /* FlowViewController.swift in Sources */,
+				CBB0635A1E3788990004EE35 /* UIFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

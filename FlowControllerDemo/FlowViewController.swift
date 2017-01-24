@@ -6,7 +6,7 @@
 //  Copyright © 2017 strv. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class FlowViewController {
     
@@ -14,14 +14,18 @@ class FlowViewController {
     
     var newEvent: Event
     
+    var navigationController: UINavigationController!
+    
     var didFinishBlock: ((FlowViewController) -> Void)?
     
     
     // MARK: - Object Lifecycle
     
-    required init()
+    required init(_ navigationController: UINavigationController)
     {
-        newEvent = Event()
+        self.navigationController = navigationController
+        
+        self.newEvent = Event()
     }
     
     deinit
@@ -32,8 +36,68 @@ class FlowViewController {
     
     // MARK: - Action
     
-    func startFlow()
+    func start()
     {
+        showLocationScreen()
+    }
+    
+    func showLocationScreen()
+    {
+        
+    }
+    
+    func showDateScreen()
+    {
+        
+    }
+    
+    func showSummaryScreen()
+    {
+        
+    }
+    
+    func finish()
+    {
+        didFinishBlock!(self)
+    }
+}
+
+extension FlowViewController: TextViewControllerDelegate {
+    
+    func controllerDidFinishWithText(text: String, controller: TextViewController) {
+        
+        newEvent.name = text
+        
+        showDateScreen()
+    }
+    
+    func controllerDidCancel(controller: TextViewController) {
+        
+    }
+}
+
+extension FlowViewController: DateViewControllerDelegate {
+    
+    func controllerDidFinishWithDate(date: Date, controller: DateViewController) {
+        
+        newEvent.date = date
+        
+        showSummaryScreen()
+    }
+    
+    func controllerDidCancel(controller: DateViewController) {
+        
+    }
+}
+
+extension FlowViewController: SummaryViewControllerDelegate {
+    
+    func controllerDidConfirm(controller: SummaryViewController) {
+        
+        finish()
+    }
+    
+    func controllerDidCancel(controller: SummaryViewController) {
         
     }
 }

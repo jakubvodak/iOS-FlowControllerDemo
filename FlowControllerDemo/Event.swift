@@ -12,7 +12,7 @@ struct Event {
     
     // MARK: - Properties
     
-    var name: NSString?
+    var name: String?
     
-    var date: NSDate?
+    var date: Date?
 }
