@@ -28,6 +28,9 @@
                                 <state key="normal" title="New Event">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="newEventAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IQ1-GD-0fs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

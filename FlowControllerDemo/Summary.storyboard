@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lIw-84-sby">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Summary View Controller-->
+        <scene sceneID="iDD-jX-m8S">
+            <objects>
+                <viewController id="lIw-84-sby" customClass="SummaryViewController" customModule="FlowControllerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LjS-Mm-9dy"/>
+                        <viewControllerLayoutGuide type="bottom" id="oug-ye-AJN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eWe-hM-NLp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYw-sX-oOI" userLabel="lblTitle">
+                                <rect key="frame" x="30" y="34" width="173.5" height="55"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPD-6n-GGA" userLabel="lblLocationTitle">
+                                <rect key="frame" x="30" y="103" width="77.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbd-We-SYn" userLabel="lblLocationValue">
+                                <rect key="frame" x="121.5" y="103" width="49" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.85481542349999995" green="0.084336405210000007" blue="0.29528836089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upS-fG-ZhT" userLabel="lblDateTitle">
+                                <rect key="frame" x="30" y="144.5" width="44" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzk-mo-Rse" userLabel="lblDateValue">
+                                <rect key="frame" x="88" y="144.5" width="49" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.85481542349999995" green="0.084336405210000007" blue="0.29528836089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KYw-sX-oOI" firstAttribute="leading" secondItem="eWe-hM-NLp" secondAttribute="leadingMargin" constant="14" id="6zc-GY-2J0"/>
+                            <constraint firstItem="upS-fG-ZhT" firstAttribute="top" secondItem="lPD-6n-GGA" secondAttribute="bottom" constant="14" id="BMA-YU-6IH"/>
+                            <constraint firstItem="upS-fG-ZhT" firstAttribute="leading" secondItem="eWe-hM-NLp" secondAttribute="leadingMargin" constant="14" id="CxC-Tq-SDw"/>
+                            <constraint firstItem="Pzk-mo-Rse" firstAttribute="leading" secondItem="upS-fG-ZhT" secondAttribute="trailing" constant="14" id="Ih0-UQ-Wel"/>
+                            <constraint firstItem="wbd-We-SYn" firstAttribute="top" secondItem="KYw-sX-oOI" secondAttribute="bottom" constant="14" id="LKQ-4V-up4"/>
+                            <constraint firstItem="wbd-We-SYn" firstAttribute="leading" secondItem="lPD-6n-GGA" secondAttribute="trailing" constant="14" id="MWM-Nf-8Ah"/>
+                            <constraint firstItem="lPD-6n-GGA" firstAttribute="leading" secondItem="eWe-hM-NLp" secondAttribute="leadingMargin" constant="14" id="PHJ-8B-A6Z"/>
+                            <constraint firstItem="lPD-6n-GGA" firstAttribute="top" secondItem="KYw-sX-oOI" secondAttribute="bottom" constant="14" id="Phl-SO-Hbx"/>
+                            <constraint firstItem="Pzk-mo-Rse" firstAttribute="top" secondItem="lPD-6n-GGA" secondAttribute="bottom" constant="14" id="Rem-0F-uPE"/>
+                            <constraint firstItem="KYw-sX-oOI" firstAttribute="top" secondItem="LjS-Mm-9dy" secondAttribute="bottom" constant="14" id="RsU-is-Knu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblDateValue" destination="Pzk-mo-Rse" id="1QX-JO-EfV"/>
+                        <outlet property="lblLocationValue" destination="wbd-We-SYn" id="bmW-O1-RYS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pc4-I1-kWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="161"/>
+        </scene>
+    </scenes>
+</document>

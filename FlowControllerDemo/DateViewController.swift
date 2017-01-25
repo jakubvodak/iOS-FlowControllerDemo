@@ -17,6 +17,13 @@ protocol DateViewControllerDelegate: class {
 
 class DateViewController: UIViewController {
 
+    // MARK: - Outlets 
+    
+    @IBOutlet weak var txtDate: UITextField!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    
     // MARK: - Delegate
     
     weak var delegate: DateViewControllerDelegate?
@@ -37,7 +44,56 @@ class DateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        applyAppearance()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        txtDate.becomeFirstResponder()
+    }
+    
 
+    func applyAppearance() {
+        
+        /* General */
+        
+        title = "New Event"
+        
+        
+        /* Buttons */
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(DateViewController.nextAction))
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        
+        
+        /* Date Picker */
+        
+        datePicker.backgroundColor = UIColor.black
+        
+        datePicker.setValue(UIColor.white, forKey: "textColor")
+        
+        txtDate.inputView = datePicker
+    }
+    
+    
+    // MARK: - Action
+    
+    @IBAction func updateDate(_ sender: AnyObject)
+    {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = .medium
+        
+        txtDate.text = dateFormatter.string(from: datePicker.date)
+    }
+    
+    
+    func nextAction() {
+        
+        txtDate.resignFirstResponder()
+        
+        didFinishWithText(date: datePicker.date)
+    }
 }

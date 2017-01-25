@@ -12,7 +12,7 @@ struct Event {
     
     // MARK: - Properties
     
-    var name: String?
+    var location: String?
     
     var date: Date?
 }

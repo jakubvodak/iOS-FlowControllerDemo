@@ -19,5 +19,11 @@ class HomeViewController: UIViewController {
         newEventFlow = FlowViewController(navigationController!)
         
         newEventFlow.start()
+        
+        newEventFlow.didFinishBlock = { flowController in
+            
+            print("finish")
+            
+        }
     }
 }

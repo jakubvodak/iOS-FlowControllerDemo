@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fRi-fm-opx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Location View Controller-->
+        <scene sceneID="AWR-fO-2FP">
+            <objects>
+                <viewController id="fRi-fm-opx" customClass="LocationViewController" customModule="FlowControllerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rPv-kX-jDl"/>
+                        <viewControllerLayoutGuide type="bottom" id="TVD-Pi-gtv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NKl-kF-Bd7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uv7-Ew-ZhH" userLabel="lblTitle">
+                                <rect key="frame" x="30" y="34" width="159.5" height="55"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New York" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MT4-0Z-6NQ" userLabel="txtLocation">
+                                <rect key="frame" x="30" y="103" width="315" height="28"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MT4-0Z-6NQ" firstAttribute="top" secondItem="uv7-Ew-ZhH" secondAttribute="bottom" constant="14" id="KXe-JX-Tij"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MT4-0Z-6NQ" secondAttribute="trailing" constant="14" id="LbL-Lj-tBh"/>
+                            <constraint firstItem="uv7-Ew-ZhH" firstAttribute="top" secondItem="rPv-kX-jDl" secondAttribute="bottom" constant="14" id="gAj-m7-jjU"/>
+                            <constraint firstItem="MT4-0Z-6NQ" firstAttribute="leading" secondItem="NKl-kF-Bd7" secondAttribute="leadingMargin" constant="14" id="rVg-89-332"/>
+                            <constraint firstItem="uv7-Ew-ZhH" firstAttribute="leading" secondItem="NKl-kF-Bd7" secondAttribute="leadingMargin" constant="14" id="sPS-DJ-ENr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtLocation" destination="MT4-0Z-6NQ" id="GdH-4Z-1eB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6V-TD-0bj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="189"/>
+        </scene>
+    </scenes>
+</document>

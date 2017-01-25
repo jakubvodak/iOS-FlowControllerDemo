@@ -17,6 +17,18 @@ protocol SummaryViewControllerDelegate: class {
 
 class SummaryViewController: UIViewController {
 
+    // MARK: - Data
+    
+    var newEvent: Event!
+    
+    
+    // MARK: - Outlets 
+    
+    @IBOutlet weak var lblLocationValue: UILabel!
+    
+    @IBOutlet weak var lblDateValue: UILabel!
+    
+    
     // MARK: - Delegate
     
     weak var delegate: SummaryViewControllerDelegate?
@@ -37,7 +49,41 @@ class SummaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        applyAppearance()
+        
+        configureView()
     }
 
+    func applyAppearance() {
+        
+        /* General */
+        
+        title = "New Event"
+        
+        
+        /* Buttons */
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(SummaryViewController.doneAction))
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+    }
+    
+    func configureView() {
+        
+        lblLocationValue.text = newEvent.location
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = .medium
+        
+        lblDateValue.text = dateFormatter.string(from: newEvent.date!)
+    }
+    
+    
+    // MARK: - Action
+    
+    func doneAction() {
+        
+        didConfirm()
+    }
 }

@@ -28,11 +28,6 @@ class FlowViewController {
         self.newEvent = Event()
     }
     
-    deinit
-    {
-        
-    }
-    
     
     // MARK: - Action
     
@@ -43,35 +38,60 @@ class FlowViewController {
     
     func showLocationScreen()
     {
+        let storyboard = UIStoryboard(name: "Location", bundle: nil)
         
+        if let controller = storyboard.instantiateInitialViewController() as? LocationViewController {
+            
+            controller.delegate = self
+            
+            navigationController.pushViewController(controller, animated: true)
+        }
     }
     
     func showDateScreen()
     {
+        let storyboard = UIStoryboard(name: "Date", bundle: nil)
         
+        if let controller = storyboard.instantiateInitialViewController() as? DateViewController {
+            
+            controller.delegate = self
+            
+            navigationController.pushViewController(controller, animated: true)
+        }
     }
     
     func showSummaryScreen()
     {
+        let storyboard = UIStoryboard(name: "Summary", bundle: nil)
         
+        if let controller = storyboard.instantiateInitialViewController() as? SummaryViewController {
+            
+            controller.delegate = self
+            
+            controller.newEvent = newEvent
+            
+            navigationController.pushViewController(controller, animated: true)
+        }
     }
     
     func finish()
     {
+        navigationController.popToRootViewController(animated: true)
+        
         didFinishBlock!(self)
     }
 }
 
-extension FlowViewController: TextViewControllerDelegate {
+extension FlowViewController: LocationViewControllerDelegate {
     
-    func controllerDidFinishWithText(text: String, controller: TextViewController) {
+    func controllerDidFinishWithLocation(location: String, controller: LocationViewController) {
         
-        newEvent.name = text
+        newEvent.location = location
         
         showDateScreen()
     }
     
-    func controllerDidCancel(controller: TextViewController) {
+    func controllerDidCancel(controller: LocationViewController) {
         
     }
 }
